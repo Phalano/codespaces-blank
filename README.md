@@ -1,2 +1,3 @@
-# projet_2025_2026
-Projet en licence informatique en C
+# projet_snake_prog3
+
+Projet de jeu snake en programmation 3
