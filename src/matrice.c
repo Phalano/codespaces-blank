@@ -37,3 +37,27 @@ void matrice_set(matrice* m, int i, int j, int x){
         m->elt[i][j] = x;
     }
 }
+
+void matrice_print(matrice* m){
+    int i, j;
+    for(i = 0; i < m->lign; i++){
+        for(j = 0; j < m->col; j++){
+            printf("%d ", m->elt[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\n");
+}
+
+matrice* matrice_file(FILE* fp){
+    int i, j, n, m;
+    fscanf(fp, "%d", &n);
+    fscanf(fp, "%d", &m);
+    matrice* r = matrice_create(m, n);
+    for(i = 0; i < r->lign; i++){
+        for(j = 0; j < r->col; j++){
+            fscanf(fp, "%d", &r->elt[i][j]);
+        }
+    }
+    return r;
+}

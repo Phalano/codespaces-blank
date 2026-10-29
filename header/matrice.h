@@ -14,5 +14,6 @@ void matrice_free(matrice * col);
 void matrice_NULL(matrice* col);
 void matrice_set(matrice* col, int i, int j, int x);
 int matrice_get(matrice* col, int i, int j);
+matrice* matrice_file(FILE* fp);
 
 #endif // MATRICE_H
